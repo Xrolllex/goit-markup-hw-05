@@ -27,14 +27,12 @@ ul {
 body {
     font-family: "Roboto", "Raleway", sans-serif;
     background-color:#FFFFFF;
-    font-size: 14;
+    font-size: 14px;
     font-style: normal;
     color: var(--background-one);
     line-height: 1.17;
     font-weight: 400;
-    
-        
-    
+ 
 }
 
 .container {
@@ -47,7 +45,12 @@ body {
     padding: 94px 0 94px 0;
 }
 
+*:hover,
+*:focus{
 
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
 /*Header*/  
 
 header {
@@ -57,7 +60,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 24px 0;
+    padding: 15px 0;
     letter-spacing: 0.02em;
     font-weight: 500;
     
@@ -70,6 +73,7 @@ header {
         letter-spacing: 0.02em;
         align-items: center;
         justify-content: flex-start;
+
 }
 
 .nav-menu li:nth-of-type(2) {
@@ -81,9 +85,26 @@ header {
     margin-right: 46px;
 }
 
-.nav-menu > li :hover {
+.link :hover {
     color: var(--basic-color);
+   
 }
+
+.nav-menu .link ::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: 29px;
+        width: 100%;
+        height: 4px;
+        background-color: #2196f3;
+        border-radius: 2px;
+}
+
+.link {
+    text-decoration: none;
+}
+
 .nav-menu >li :focus {
     color: var(--basic-color);
 }
@@ -179,6 +200,49 @@ h1 {
          
 }
 
+/*modal overlay*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    
+}
+
+.modal {
+    background-color: #fff;
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /* service offer */
 
 .grid {
@@ -187,11 +251,44 @@ h1 {
     gap: 30px;
     padding: 0 15px;
     margin-bottom: 94px;
+
 }
+
+.box {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--basic-color);
+    color: #FFFFFF;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    padding-left: 24px;
+    padding-top: 49px;
+    line-height: 1.55;
+
+    transform: translatey(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.box:hover .page-up {
+    transform: translatey(0);
+}
+
+
 
 .grid >li:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    
 }
+
+
 
 .grid>li:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -204,7 +301,6 @@ h1 {
 }
 
 
-
 /* Lorem Ipsum */
 
 
@@ -213,22 +309,22 @@ h1 {
 
 }
 
-.item-list {
+.lorem {
      padding-right: 30px;
      
 }
 
-.item-list>svg {
+.lorem>svg {
     background-color: var(--background-two);
     padding: 25px 100px;
     
 }
 
-.item-list h3 {
+.lorem h3 {
     font-size: 14px;
 }
 
-.item-list p {
+.lorem p {
     color: #757575;
     letter-spacing: 0.03em;
     font-size: 14px;
@@ -246,9 +342,35 @@ h1 {
     padding-top: 94px;
 }
 
-.doing {
-    padding-bottom: 94px;
+
+
+.doing-examples {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        line-height: 0.88;
+        font-weight: 700;
+        background-color: rgba(47, 48, 58, 0.8);
+        color: #fff;
+        display: flex;
+        padding-top: 27px ;
+        padding-bottom: 27px;
+        text-align: center;
+        margin: auto;
+        justify-content: space-around;
+        
 }
+
+.item-list {
+    position: relative;
+    gap: 30px;
+    margin: auto;
+}
+
+
+
 
 
 /* Our team */

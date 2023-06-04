@@ -17,9 +17,9 @@
                     
                 <ul class="nav-menu">
                     <li><a href="./index.html" class="logo"><span class="web">Web</span>Studio</a></li>
-                    <li><a href="#">Agencja</a></li>
-                    <li><a href="./portfolio.html">Portfolio</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li class="link"><a href="#">Agencja</a></li>
+                    <li class="link"><a href="./portfolio.html">Portfolio</a></li>
+                    <li class="link"><a href="#">Kontakt</a></li>
     
                 </ul>
 
@@ -49,34 +49,36 @@
             <div class="container">
                 <h1>EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
             
-                <input type="button" class="service-button" value="Zamów usługe">
+                <input type="button" class="service-button" value="Zamów usługe" data-modal-open>
              </div>
         </section>
 
+
+    
     <section class="text-section">
         
      <div class="container">
             <ul class="lorem-ipsum" >
             
-                <li class="item-list">
+                <li class="lorem">
                     <svg class="lorem-icons" width="70" height="70">
                         <use href="./images/icons.svg#icon-antenna-1"></use>
                     </svg>
                     <h3>LOREM IPSUM</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum et malesuada</p></li>
-                <li class="item-list">
+                <li class="lorem">
                     <svg class="lorem-icons" width="70" height="70">
                         <use href="./images/icons.svg#icon-clock-1"></use>
                     </svg>
                     <h3>LOREM IPSUM</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum et malesuada</p></li>
-                <li class="item-list">
+                <li class="lorem">
                     <svg class="lorem-icons" width="70" height="70">
                         <use href="./images/icons.svg#icon-diagram-1"></use>
                     </svg>
                     <h3>LOREM IPSUM</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum et malesuada</p></li>
-                <li class="item-list">
+                <li class="lorem">
                     <svg class="lorem-icons" width="70" height="70">
                         <use href="./images/icons.svg#icon-astronaut-1"></use>
                     </svg>
@@ -87,18 +89,39 @@
         </div>
     </section>
     
-        <section class="doing">
-        
+    <section class="doing">
+        <div class="container">
+            
             <h2>Czym się zajmujemy</h2>
 
-                <div class="container">
                     <ul>
-                        <li class="item-list"><img src="images/box1.jpg" width="370" height="294" alt="Programowanie na laptopie"></li>
-                        <li class="item-list"><img src="images/box2.jpg" width="370" height="294" alt="Programista używa telefonu przy laptopie"></li>
-                        <li class="item-list"><img src="images/box3.jpg" width="370" height="294" alt="Programista używa tableta przy laptopie"></li>
+                        <li class="item-list">
+                            
+                                <img src="images/box1.jpg" width="370" height="294" alt="Programowanie na laptopie">
+                               
+                                    <p class="doing-examples">Aplikacje komputerowe</p>
+                             
+
+                        </li>
+                        
+                        <li class="item-list">
+                                <img src="images/box2.jpg" width="370" height="294" alt="Programista używa telefonu przy laptopie">
+                                <p class="doing-examples">Aplikacje mobilne</p>
+                            
+                        </li>
+
+                        <li class="item-list">
+                            <img src="images/box3.jpg" width="370" height="294" alt="Programista używa tableta przy laptopie">
+                               
+                                    <p class="doing-examples">Rozwiązania graficzne</p>
+
+                        </li>
+
                     </ul>
-                </div>
-        </section>
+                    
+
+        </div>
+    </section>
         
         <section class="team">
 
@@ -279,6 +302,14 @@
 
 </footer>
 
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>X</button>
+    </div>
+</div>
+
+
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
